@@ -12,7 +12,7 @@ class App extends Component {
     this.setState(prevState => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen }
     })
-  }
+  };
 
   backdropClickHandler = () => {
     this.setState({ sideDrawerOpen: false })
@@ -28,11 +28,13 @@ class App extends Component {
       <div style={{height: '100%'}}>
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
-        {backdrop}
-        ...
+        {Backdrop}
+        <main style={{margintTop: '64px'}}>
+          <p> This is the content</p>
+        </main>
       </div>
-    );
-}
+    )
+  }
 }
 
-export default App
+export default App;
