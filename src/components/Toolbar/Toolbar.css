@@ -1,8 +1,9 @@
  .toolbar {
    position: fixed;
    width: 100%;
-   background: #4B5320; /*army green*/
+   background: white;
    height: 60px;
+   padding-left: 20px;
  }
 
 .toolbar__navigation {
@@ -12,9 +13,10 @@
 }
 
 .toolbar__logo a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 1.5rem;
+  padding-left: 20px;
 }
 
 .spacer {
@@ -24,8 +26,8 @@
 .toolbar_navigation-items ul {
   list-style: none;
   margin: 0;
-  padding: 0;
   display: flex;
+  padding-right: 30px;
 }
 
 .toolbar_navigation-items li {
@@ -33,11 +35,27 @@
 }
 
 .toolbar_navigation-items a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 .toolbar_navigation-items a:hover,
 .toolbar_navigation-items a:active {
   color: #fa923f;
+}
+
+@media (max-width: 768px) {
+    .toolbar_navigation-items {
+      display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .toolbar__toggle-button {
+      display: none;
+    }
+
+    .toolbar__logo {
+      margin-left: 0;
+    }
 }
